@@ -1,0 +1,10 @@
+<%= form_tag("/users/create") do %>
+<h1>新規登録</h1>
+<p>name</p>
+<textarea name ="name"><%=@user.name %></textarea>
+<p>email</p>
+<textarea name= "email"><%=@user.email %></textarea>
+<p>passsword</p>
+<textarea name= "password"><%=@user.password %></textarea>
+<input type="submit" value="登録">
+<% end %>

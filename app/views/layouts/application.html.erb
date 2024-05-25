@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TwitterClone2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <%#= link_to("ホーム","/") %>
+    <%= link_to "ホーム", home_top_path %>
+    <%# current_user = User.find_by(id: session[:user_id) %>
+    <% current_user = User.find_by(id: session[:user_id]) %>
+    
+    <%#= link_to(current_user.name,"/users/#{current_user.id}") %>
+    <%= link_to(current_user.name, "/users/#{current_user.id}") %>
+    
+    <%#= link_to current_user.name, users_show_path(@user) %>
+    
+    <%= yield %>
+  </body>
+</html>

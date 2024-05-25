@@ -1,0 +1,11 @@
+<h1>ホーム画面</h1>
+<%#= link_to("投稿一覧","/posts/index") %>
+<%= link_to "投稿一覧", posts_index_path(@posts) %>
+<%#= link_to("新規投稿","/posts/new") %>
+<%= link_to "新規投稿", posts_new_path(@post) %>
+<%#= link_to("ユーザー一覧","/users/index") %>
+<%= link_to "ユーザー一覧", users_index_path(@users) %>
+<%#= link_to("新規登録","/users/new") %>
+<%= link_to "新規登録", users_new_path(@user) %>
+<%= link_to "ログイン", users_login_form_path %>
+<%= button_to "ログアウト", users_logout_path %>
